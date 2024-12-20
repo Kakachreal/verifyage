@@ -1,0 +1,109 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    background:#ff6347
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  .slot-machine-container {
+    margin-top: 50px;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #ff6347;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .slots {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .slot {
+    font-size: 3rem;
+    background: #eee;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0 5px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  @keyframes shuffle {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    25% {
+      transform: scale(1.2) rotate(15deg);
+    }
+    50% {
+      transform: scale(1) rotate(0deg);
+    }
+    75% {
+      transform: scale(1.2) rotate(-15deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+  
+  .slot span {
+    display: block;
+    animation: none; /* Default state */
+  }
+  .spinning span {
+    animation: shuffle 0.8s ease infinite; /* Shuffle effect */
+  }
+  .result span {
+  animation: bounce 0.5s ease-out; /* Bounce-in effect */
+}
+  
+  
+  
+  button {
+    background: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background: #e55340;
+  }
+  
+  .message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  footer {
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
